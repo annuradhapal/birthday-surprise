@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         PAGE 1 - PASSWORD
+    ================================= -->
+
+    <section id="page1" class="page active">
+
+        <div class="card">
+
+            <div class="heart">❤️</div>
+
+            <h1>Before we begin...</h1>
+
+            <p>
+                There's a little surprise waiting for you.
+            </p>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter the secret password"
+            >
+
+            <button onclick="checkPassword()">
+                ENTER ❤️
+            </button>
+
+            <p id="passwordMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 2 - URDF QUESTION
+    ================================= -->
+
+    <section id="page2" class="page">
+
+        <div class="card">
+
+            <div class="question-heart">
+                🥺
+            </div>
+
+            <h1>One little question...</h1>
+
+            <p>
+                Will you help me make the URDF file?
+            </p>
+
+            <p class="small-text">
+                It's very important... 🥹
+            </p>
+
+            <div class="answer-buttons">
+
+                <button
+                    class="yes-button"
+                    onclick="nextPage(3)">
+                    YES ❤️
+                </button>
+
+                <button
+                    class="no-button"
+                    id="noButton"
+                    onclick="moveNoButton()">
+                    NO 😈
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 3 - OUR STORY
+    ================================= -->
+
+    <section id="page3" class="page">
+
+        <div class="card">
+
+            <div class="two-people">
+
+                <div class="person person-left">
+                    👩🏻‍💻
+                </div>
+
+                <div class="love-heart">
+                    ❤️
+                </div>
+
+                <div class="person person-right">
+                    👨🏻‍💻
+                </div>
+
+            </div>
+
+            <h1>And somehow... ❤️</h1>
+
+            <p>
+                It all started with a simple conversation
+                about <strong>URDF files</strong>. 🤖
+            </p>
+
+            <p>
+                What began with links, joints and robots
+                slowly became something more special.
+            </p>
+
+            <p>
+                And somewhere along the way,
+                we found our little bond. ❤️
+            </p>
+
+            <button onclick="nextPage(4)">
+                CONTINUE 💕
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 4 - HAPPY BIRTHDAY
+    ================================= -->
+
+    <section id="page4" class="page">
+
+        <div class="card birthday-card">
+
+            <div class="birthday-balloons">
+                🎈 🎈 🎈
+            </div>
+
+            <div class="birthday-cake">
+                🎂
+            </div>
+
+            <h1>
+                HAPPY BIRTHDAY
+            </h1>
+
+            <h2>
+                MY LOVE ❤️
+            </h2>
+
+            <p>
+                Today is your special day.
+            </p>
+
+            <p>
+                And I wanted to make something
+                special just for you. 🥹
+            </p>
+
+            <button onclick="nextPage(5)">
+                NEXT ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 5 - MAKE A WISH
+    ================================= -->
+
+    <section id="page5" class="page">
+
+        <div class="card wish-card">
+
+            <div class="wish-cake">
+                🎂
+            </div>
+
+            <h1>
+                Make a Wish ✨
+            </h1>
+
+            <p>
+                Close your eyes...
+            </p>
+
+            <p>
+                Make a beautiful birthday wish,
+                birthday boy. ❤️
+            </p>
+
+            <div class="candles">
+                🕯️ 🕯️ 🕯️
+            </div>
+
+            <button onclick="makeWish()">
+                MAKE A WISH 💫
+            </button>
+
+            <p id="wishMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 6 - CAKE
+    ================================= -->
+
+    <section id="page6" class="page">
+
+        <div class="cake-page">
+
+            <div class="floating-balloon balloon1">
+                🎈
+            </div>
+
+            <div class="floating-balloon balloon2">
+                🎈
+            </div>
+
+            <div class="floating-balloon balloon3">
+                🎈
+            </div>
+
+            <div class="floating-balloon balloon4">
+                🎈
+            </div>
+
+            <div class="cake-container">
+
+                <div id="cake" class="big-cake">
+                    🎂
+                </div>
+
+                <h1>
+                    Time to cut the cake! 🎂
+                </h1>
+
+                <p>
+                    Because birthday boys deserve cake. ❤️
+                </p>
+
+                <button onclick="cutCake()">
+                    🔪 CUT THE CAKE
+                </button>
+
+            </div>
+
+            <div id="balloons"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 7 - LETTER
+    ================================= -->
+
+    <section id="page7" class="page">
+
+        <div class="card message-card">
+
+            <div class="envelope">
+                💌
+            </div>
+
+            <h1>
+                A little message for you...
+            </h1>
+
+            <p>
+                I wrote this just for you. ❤️
+            </p>
+
+            <button onclick="openLetter()">
+                OPEN MY LETTER 💌
+            </button>
+
+            <div id="letter" class="letter">
+
+                <h2>
+                    Happy Birthday, my love ❤️
+                </h2>
+
+                <p>
+                    I hope today reminds you of just
+                    how special you are to me.
+                </p>
+
+                <p>
+                    I'm so lucky to have someone who
+                    can make me smile, make me laugh,
+                    annoy me, and still make my heart
+                    melt at the same time. 🥹❤️
+                </p>
+
+                <p>
+                    I hope this new year of your life
+                    brings you happiness, success,
+                    beautiful memories, and everything
+                    you've been wishing for.
+                </p>
+
+                <p>
+                    Thank you for being you.
+                </p>
+
+                <p>
+                    And thank you for being a part of
+                    my life. ❤️
+                </p>
+
+                <p>
+                    Happy Birthday, baby. 🎂
+                </p>
+
+                <p>
+                    I hope I get to celebrate many,
+                    many more birthdays with you.
+                </p>
+
+                <p class="signature">
+                    With all my love ❤️
+                </p>
+
+            </div>
+
+            <button
+                id="letterNext"
+                onclick="nextPage(8)">
+                ONE LAST THING... ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PAGE 8 - FINAL
+    ================================= -->
+
+    <section id="page8" class="page final-page">
+
+        <div class="final-content">
+
+            <div class="final-hearts">
+                💕 ❤️ 💕
+            </div>
+
+            <div class="giant-heart">
+                ❤️
+            </div>
+
+            <h1>
+                I LOVE YOU, BABY
+            </h1>
+
+            <h2>
+                Happy Birthday 🎂
+            </h2>
+
+            <p>
+                Here's to many more birthdays,
+                memories, laughs and moments together.
+            </p>
+
+            <p class="final-line">
+                You will always be someone very special
+                to me. ❤️
+            </p>
+
+            <div class="final-hearts">
+                💕 🎈 💕 🎈 💕
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
